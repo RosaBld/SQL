@@ -1,5 +1,7 @@
 <body>
+    <a href="read.php">Liste des données</a>
 	<h2>Ajouter</h2>
+    <link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 	<form action="" method="post">
 		<div>
 			<label for="name">Name</label>
@@ -41,7 +43,8 @@
 
         $stmt = $bdd->prepare('INSERT INTO hiking (name, difficulty, distance, duration, height_difference) VALUES (:name, :difficulty, :distance, :duration, :height_difference)');
         $stmt->execute([':name' => $name, ':difficulty' => $difficulty, ':distance' => $distance, ':duration' => $duration, ':height_difference' => $height_difference]);
-        echo '<script>alert("Congrats! You entered a new hiking experience")</script>';
+        echo "<p>New path added !</p>";
+		echo '<a href="read.php">Back to dashboard</a>';
         
         exit;
     }

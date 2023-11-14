@@ -13,7 +13,6 @@
                 $bdd = new PDO('mysql:host=localhost;dbname=becode;charset=utf8', 'root', '');
                 $query=$bdd->query('SELECT * FROM hiking');
                 
-
                 echo '<table> <tr> <th>Id:</th> <th>Name:</th> <th>Difficulty:</th> <th>Distance:</th> <th>Duration:</th> <th>Height difference:</th>';
                 while ($row = $query->fetch())
                 {
@@ -24,11 +23,11 @@
                         <td>' . $row['distance'] . '</td>
                         <td>' . $row['duration'] . '</td>
                         <td>' . $row['height_difference'] . '</td>
+                        <td><a href="update.php?id=' . $row['id'] . '&name=' . $row['name'] . '&difficulty=' . $row['difficulty'] . '&distance=' . $row['distance'] . '&duration=' . $row['duration'] . '&height_difference=' . $row['height_difference'] . '">Edit</a></td>
+                        <td><a href="delete.php?id=' . $row['id'] . '">Delete</a></td>
                         </tr>';
                 }
                 echo '</table>';
-                
-                include 'create.php';
 
                 exit;
             }
