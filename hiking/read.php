@@ -27,7 +27,11 @@
                         <td><a href="delete.php?id=' . $row['id'] . '">Delete</a></td>
                         </tr>';
                 }
-                echo '</table>';
+                echo '</table>
+                <br>
+                <br>
+                <br>
+                <a href="create.php">Create a new Hike!</a>';
 
                 exit;
             }

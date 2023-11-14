@@ -24,16 +24,17 @@
 			<input type="text" name="distance" value="">
 		</div>
 		<div>
-			<label for="duration">Durée</label>
+			<label for="duration">Duration</label>
 			<input type="time" name="duration" value="">
 		</div>
 		<div>
-			<label for="height_difference">Dénivelé</label>
+			<label for="height_difference">Height Difference</label>
 			<input type="text" name="height_difference" value="">
 		</div>
-		<button type="submit" name="button">Envoyer</button>
+		<button type="submit" name="button">Send</button>
 	</form>
     <?php
+    require 'get.php';
     if ($_SERVER['REQUEST_METHOD']==='POST') {
         $name=$_POST['name'];
         $difficulty=$_POST['difficulty'];
@@ -41,10 +42,10 @@
         $duration=$_POST['duration'];
         $height_difference=$_POST['height_difference'];
 
-        $stmt = $bdd->prepare('INSERT INTO hiking (name, difficulty, distance, duration, height_difference) VALUES (:name, :difficulty, :distance, :duration, :height_difference)');
+        $stmt = $pdo->prepare('INSERT INTO hiking (name, difficulty, distance, duration, height_difference) VALUES (:name, :difficulty, :distance, :duration, :height_difference)');
         $stmt->execute([':name' => $name, ':difficulty' => $difficulty, ':distance' => $distance, ':duration' => $duration, ':height_difference' => $height_difference]);
-        echo "<p>New hike added !</p>";
-		echo '<a href="read.php">Back</a>';
+        echo '<p>Congrats! You entered a new hiking experience</p>
+        <a href="read.php"</a>';
         
         exit;
     }
