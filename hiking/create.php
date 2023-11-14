@@ -43,8 +43,8 @@
 
         $stmt = $bdd->prepare('INSERT INTO hiking (name, difficulty, distance, duration, height_difference) VALUES (:name, :difficulty, :distance, :duration, :height_difference)');
         $stmt->execute([':name' => $name, ':difficulty' => $difficulty, ':distance' => $distance, ':duration' => $duration, ':height_difference' => $height_difference]);
-        echo "<p>New path added !</p>";
-		echo '<a href="read.php">Back to dashboard</a>';
+        echo "<p>New hike added !</p>";
+		echo '<a href="read.php">Back</a>';
         
         exit;
     }

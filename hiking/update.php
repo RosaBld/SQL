@@ -61,8 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$stmt = $pdo->prepare("UPDATE hiking SET name = ?, difficulty = ?, distance = ?, duration = ?, height_difference = ? WHERE id = ?");
 	$stmt->execute([$name, $difficulty, $distance, $duration, $height, $id]);
 
-	echo "<p>Walk information updated successfully!</p>";
-	echo '<a href="read.php">Back to dashboard</a>';
+	echo "<p>Hike information updated successfully!</p>";
+	echo '<a href="read.php">Back</a>';
 }
 ?>
 
