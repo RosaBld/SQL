@@ -20,13 +20,13 @@ Like the other ones, the database was given and the main goal was to learn how t
 
 The Weather_App2 is a new version of the [WeatherApp](https://github.com/RosaBld/WeatherApp)!. Again, the Database was given by the coach. Again, the goal was to display those datas and create a form allowing us to enter new datas (weather related).
 
-### Groupe Project - Pokedex
+## Groupe Project - Pokedex
 
 You can find the project [here](https://github.com/JustineLeleu/Pokedex)!
 
 > Develop a Pokedex application using PHP procedural programming. The application should have an index.php page displaying a list of Pokemon. Users should be able to click on a Pokemon to view its details and evolution. Additionally, implement an user authentication system with a login and registration page, allowing users to save their favorite Pokemon.
 
-#### What was used
+### What was used
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![mySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
